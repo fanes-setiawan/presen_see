@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "306704345620",
+    "project_id": "presen-see",
+    "storage_bucket": "presen-see.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306704345620:android:ec70b10e37c7cb1b9f1501",
+        "android_client_info": {
+          "package_name": "com.example.presen_see"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306704345620-slr7hanip5oiidhdn9sske6ko9i62cps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvIsELSi2O5d0RAVmuEkCm0IwMLb8z_II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306704345620-slr7hanip5oiidhdn9sske6ko9i62cps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
