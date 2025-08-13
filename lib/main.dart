@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'core/constant/app_color.dart';
 import 'presentation/blocs/auth_bloc/auth_bloc.dart';
 import 'presentation/blocs/auth_bloc/auth_event.dart';
 import 'presentation/blocs/attendance_bloc/attendance_bloc.dart';
 import 'presentation/pages/splash_page.dart';
 import 'injection_container.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
-  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
 
+  await dotenv.load(fileName: ".env");
   final di = await InjectionContainer.init();
-
   runApp(
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => AuthBloc()..add(AuthStarted())),
         BlocProvider(
-          create: (_) => AttendanceBloc(
-            addAttendance: di.addUsecase,
-            getAttendances: di.getUsecase,
-            syncAttendances: di.syncUsecase,
-            uploadImage: di.uploadImageUsecase,
-          ),
+          create:
+              (_) => AttendanceBloc(
+                addAttendance: di.addUsecase,
+                getAttendances: di.getUsecase,
+                syncAttendances: di.syncUsecase,
+                uploadImage: di.uploadImageUsecase,
+              ),
         ),
       ],
       child: const MyApp(),
