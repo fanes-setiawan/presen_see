@@ -1,16 +1,35 @@
-# presen_see
+# PresenSee App
 
-A new Flutter project.
+PresenSee is a Flutter-based digital attendance application integrated with Firebase, Hive for local storage, Bloc for state management, and Cloudinary for image uploads. The app allows users to clock in only when they are physically located at the office premises.
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to run the app locally:
 
-A few resources to get you started if this is your first Flutter project:
+1. **Clone the repository:**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+git clone https://github.com/fanes-setiawan/presen_see.git
+cd presensee
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. **Install dependencies:**
+
+```bash
+flutter pub get
+```
+
+3. **Setup environment variables:**
+
+```bash
+CLOUDINARY_CLOUD_NAME=******
+CLOUDINARY_UPLOAD_PRESET=******
+```
+
+4. **Run the app:**
+
+```bash
+flutter run
+```
